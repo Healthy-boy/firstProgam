@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>input message</title>
+	<style>
+		form,fieldset{
+			padding:0;
+			margin:0;
+		}
+		.absMiddle{
+			position:relative;
+			left:0;right:0;
+			margin:auto auto;
+		}
+		form{
+			border:1px solid;
+			width:500px;
+			height:600px;
+			background:pink;
+		}
+		fieldset{
+			width:400px;
+			padding-top:100px;
+			top:100px;
+			text-align:center;
+			font-size:16px;
+			font-family:'Times new roman';
+			background:#C3EBF6;	
+		}
+		legend{
+			font-size:30px;
+		}
+		input[type="radio"],[type="checkbox"]{
+			vertical-align:-2px;
+		}
+		tbody th,td{
+			border:1px solid;
+			text-align:left;
+			width:220px;
+		}
+		tfoot td{
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<form action="javascript:;" target="_self" method='GET' class="absMiddle">
+		<fieldset class="absMiddle">
+			<legend>this is your message</legend>		
+			<table>
+				<tbody>
+					<tr>
+						<th>name:</th>
+						<td><input type="text" size="10"></td>
+					</tr>
+					<tr>
+						<th>sex:</th>
+						<td>
+							<input id="man" type="radio" name="sex" value="man">
+							<label for="man">man</label> 
+							<input id="woman" type="radio" name="sex" value="woman">
+							<label for="woman">woman</label> <br/>
+						</td>
+					</tr>
+					<tr>
+						<th>telephone:</th>
+						<td><input type="password"></td>
+					</tr>
+					<tr>
+						<th>habbit:</th>
+						<td>
+							<input type="checkbox" name="dance">dance
+							<input type="checkbox" name="swim">swim
+							<input type="checkbox" name="read">read
+							<input type="checkbox" name="other">other
+						</td>
+					</tr>
+					<tr>
+						<th>living city:</th>
+						<td>
+							<select name="city">
+								<option value="Beijing">Beijing</option>
+								<option value="Shenzhen">Shenzhen</option>
+								<option value="Hongkong">Hongkong</option>
+								<option value="Wuhan">Wuhan</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>photo:</th>
+						<td><input type="file"></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td colspan="2">
+							<input type="image" src="xxx.png" alt="img submit">
+							<input type="reset" name="reset" value="reset">
+							<input type="submit" name="submit" value="submit">
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+			
+		</fieldset>
+	</form>
+	<script>
+		window.onload = function(){
+			var oForm = document.getElementsByTagName('form')[0];
+			oForm.onsubmit = function(){
+				document.write('submit success!!!')
+			}
+		}
+	</script>
+</body>
+</html>

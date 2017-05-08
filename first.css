@@ -1,0 +1,146 @@
+
+#container{
+	border:1px solid red;
+	padding-left:200px;
+	padding-right:150px;
+}
+#container:after{
+	clear:both;
+	display:block;
+	content:'.';
+	visibility:hidden;
+	line-height:0;
+	height:0;
+}
+.common{
+	height:500px;
+	float:left;
+	position:relative;
+}
+/*this is all the middle div's css*/
+#middle{
+	width:100%;
+	background:#AFAFCB;
+	text-align:center;
+}
+#toLeft{
+	position:absolute;
+	top:90px;
+	left:145px;		
+}
+#toRight{
+	position:absolute;
+	top:90px;
+	left:780px;
+}
+.fade{
+	opacity:0.1;
+	z-index:111;
+}
+#picContain1{
+	width:560px;
+	height:92px;
+	overflow:hidden;
+	position:absolute;
+	left:220px;
+}
+#picContain2{
+	width:1200px;
+	position:relative;
+}
+#picContain2:after{
+	clear:both;
+	display:block;
+	content:'.';
+	visibility:hidden;
+	line-height:0;
+	height:0;
+}
+#picContain2 img{
+	width:120px;
+	float:left;
+	margin:10px;
+}
+
+.under{
+	border:1px solid;
+	margin:5px;
+	width:320px;
+	height:320px;
+	position:absolute;
+	bottom:0;
+}
+#picWall{
+	
+}
+
+#moveWin{
+	left:650px;
+}
+#moveWin #win{
+	width:138px;
+	height:120px;
+	background:url(./image/click.gif);
+	position:absolute;
+}
+#moveBall{
+	left:325px;
+	background:white;
+}
+#moveBall #ball{
+	width:63px;
+	height:63px;
+	background:url(./image/ball.jpg);
+	position:absolute;
+	bottom:0;
+	left:150px;
+}
+/*this is all the left div's css*/
+#left{
+	width:200px;
+	background:#E9B5B5;
+	margin-left:-100%;
+	right:200px;
+	text-align:center;
+	font-family:'Times new roman','宋体';
+}
+#left img{
+	width:150px;
+	margin:25px;
+}
+#left #name{
+	text-decoration:underline;
+}
+#left #mail{
+	width:120px;
+}
+#left textarea{
+	font-family:'Times new roman';
+	font-size:16px;
+	line-height:16px;
+	width:190px;
+	height:100px;
+
+	white-space:pre;
+	text-align:center;
+	vertical-align:center;
+	overflow:auto;	
+}
+#left a{
+	display:block;
+	position:absolute;
+	bottom:10px;
+	right:10px;
+}
+/*this is all the right div's css*/
+#right{
+	width:150px;
+	background:#DADE69;
+	margin-right:-150px;
+}
+
+/*this is all the footer div's css*/
+#footer{
+	background:blue;
+	height:100px;
+}
